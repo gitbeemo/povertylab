@@ -1,4 +1,13 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
 def main():
+# Collect data and process the information
+
+
+
+# to display the graph
+
 
 if __name__ == '__main__':
     main()
