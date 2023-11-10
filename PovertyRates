@@ -1,14 +1,22 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def main():
-# Collect data and process the information
+df = pd.read_excel("C:/Users/benjc/OneDrive/Documents/Poverty.xlsx", 
+                     sheet_name="Data", header=4, usecols=[1, 3, 4])
 
 
+years = df['Unnamed: 1'].astype(float)
+white = df['White, non-Hispanic']
+black = df['Black']
 
-# to display the graph
+plt.figure(figsize=(12, 6))
+plt.plot(years, white, marker='o', label='White, non-Hispanic')
+plt.plot(years, black, marker='o', label='Black')
 
+plt.title('Population of Race Poverty')
+plt.xlabel('Year')
+plt.ylabel('Percentage')
+plt.legend()
 
-if __name__ == '__main__':
-    main()
-h
+plt.grid(True)
+plt.show()
